@@ -22,4 +22,8 @@ class ApplicationController < Sinatra::Base
     User.destroy(params[:id])
   end
 
+  patch '/users/:email/:bet' do
+    user = User.find_by(email: params[:email])
+    user.update_attribute(:tokens, params[:bet])
+  end
 end
