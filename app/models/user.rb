@@ -1,3 +1,14 @@
-class User < ActiveRecord::Base
-    has_many :icons, dependent: :destroy
+require_relative 'player'
+
+class User < Player
+    def initialize
+        super
+    end
+
+    MAX_DECIDE_SCORE = 22
+
+    def decide 
+        @score < MAX_DECIDE_SCORE
+    end
+
 end
