@@ -21,6 +21,7 @@ GEM
       activerecord (>= 5.a)
       database_cleaner-core (~> 2.0.0)
     database_cleaner-core (2.0.1)
+    deck (1.1.2)
     diff-lcs (1.4.4)
     eventmachine (1.2.7)
     ffi (1.15.3)
@@ -93,6 +94,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord (~> 6.1)
   database_cleaner (~> 2.0)
+  deck (~> 1.1.2)
   pry (~> 0.14.1)
   rack-contrib (~> 2.3)
   rack-cors (~> 1.1)
