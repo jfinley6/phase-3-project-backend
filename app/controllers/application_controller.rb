@@ -25,5 +25,6 @@ class ApplicationController < Sinatra::Base
   patch '/users/:email/:bet' do
     user = User.find_by(email: params[:email])
     user.update_attribute(:tokens, params[:bet])
+    user.to_json(only: [:username, :email, :tokens], include: { icons: {only: [:icon_name, :image_url, :selected]}})
   end
 end
