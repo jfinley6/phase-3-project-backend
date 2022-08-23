@@ -17,5 +17,4 @@ class Dealer < Player
     end
 end
 
-binding.pry
 

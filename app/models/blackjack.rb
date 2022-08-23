@@ -54,5 +54,3 @@ class Blackjack
 
 end
 
-binding.pry
-

@@ -28,5 +28,3 @@ class Player
         @holding_cards << card
     end
 end
-
-binding.pry
