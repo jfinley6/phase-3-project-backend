@@ -18,7 +18,7 @@ class ApplicationController < Sinatra::Base
 
   get '/users' do
     users = User.all.order(tokens: :desc).limit(5)
-    users.to_json
+    users.to_json(only: [:username, :email, :tokens], include: { icons: {only: [:icon_name, :image_url, :selected]}})
   end
 
   delete '/users/:id' do
@@ -42,8 +42,8 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/icon/:email/:name/:image_url' do
-    user = User.find_by(email: params[:email])
-    icon__attrs  = { icon_name: params[:name], 
+  user = User.find_by(email: params[:email])
+  icon__attrs  = { icon_name: params[:name], 
                      user_id: user.id, 
                      image_url: params[:image_url] }
 
