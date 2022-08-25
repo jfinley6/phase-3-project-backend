@@ -4,13 +4,16 @@ default: &default
   timeout: 5000
 
 development:
-  <<: *default
-  database: db/development.sqlite3
+  adapter: sqlite3
+  database: databse.db
 
 test:
-  <<: *default
-  database: db/test.sqlite3
+  adapter: sqlite3
+  database: database.db
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  database: mission
+  username: username
+  password: password
+  host: localhost

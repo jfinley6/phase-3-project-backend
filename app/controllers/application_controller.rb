@@ -18,7 +18,7 @@ class ApplicationController < Sinatra::Base
 
   get '/users' do
     users = User.all.order(tokens: :desc).limit(5)
-    users.to_json
+    users.to_json(only: [:username, :email, :tokens], include: { icons: {only: [:icon_name, :image_url, :selected]}})
   end
 
   delete '/users/:id' do

@@ -30,8 +30,7 @@ gem "sinatra-activerecord", "~> 2.0"
 # https://github.com/ruby/rake
 gem "rake", "~> 13.0"
 
-# Provides functionality to interact with a SQLite3 database
-gem "sqlite3", "~> 1.4"
+
 
 # Require all files in a folder
 gem "require_all", "~> 3.0"
@@ -51,4 +50,11 @@ group :test do
   gem "rack-test", "~> 1.1"
   gem "rspec", "~> 3.10"
   gem "rspec-json_expectations", "~> 2.2"
+end
+
+
+
+group :production do
+  gem 'pg'
+  gem 'activerecord-postgresql-adapter'
 end
