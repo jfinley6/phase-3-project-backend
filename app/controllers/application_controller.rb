@@ -21,8 +21,9 @@ class ApplicationController < Sinatra::Base
     users.to_json(only: [:username, :email, :tokens], include: { icons: {only: [:icon_name, :image_url, :selected]}})
   end
 
-  delete '/users/:id' do
-    User.destroy(params[:id])
+  delete '/users/:email' do
+    user = User.find_by(email: params[:email])
+    user.destroy
   end
 
   get '/users/:email/:bet' do
