@@ -42,7 +42,7 @@ class ApplicationController < Sinatra::Base
     icons.to_json
   end
 
-  post '/store_icons/' do
+  post '/store_icons' do
     icon = StoreIcon.create(name: params[:name], image_url: params[:image_url])
     icon.to_json
   end
