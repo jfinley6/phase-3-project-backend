@@ -42,6 +42,10 @@ class ApplicationController < Sinatra::Base
     icons.to_json
   end
 
+  post '/store_icons/' do
+    icon = StoreIcon.create(name: params[:name], image_url: params[:image_url])
+  end
+
   get '/icon/:email/:name/:image_url' do
   user = User.find_by(email: params[:email])
   icon__attrs  = { icon_name: params[:name], 
