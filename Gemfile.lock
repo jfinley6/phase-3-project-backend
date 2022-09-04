@@ -76,7 +76,8 @@ GEM
     zeitwerk (2.6.0)
 
 PLATFORMS
-  x86_64-darwin-20
+  ruby
+  x86_64-linux
 
 DEPENDENCIES
   activerecord (~> 6.1)
