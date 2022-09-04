@@ -1,6 +1,6 @@
 require_relative 'player'
 require 'deck'
-require 'pry'
+
 
 
 class Dealer < Player

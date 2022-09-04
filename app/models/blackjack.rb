@@ -1,5 +1,5 @@
 require 'deck'
-require 'pry'
+
 
 class Blackjack
     MAX = 21
