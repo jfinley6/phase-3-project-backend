@@ -31,11 +31,6 @@ class ApplicationController < Sinatra::Base
     user.update_attribute(:tokens, params[:bet])
     user.to_json(only: [:username, :email, :tokens], include: { icons: {only: [:icon_name, :image_url, :selected]}})
   end
-  
-  get '/deck' do
-    deck = Deck.new.cards.to_s
-    deck.tr('[]', '')
-  end
 
   get '/store_icons' do
     icons = StoreIcon.all
