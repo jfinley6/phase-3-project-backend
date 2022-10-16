@@ -7,7 +7,7 @@ A blackjack app which allows users to create an account and bet tokens by playin
 
 ## Built With
 
-* [ReactJS](https://reactjs.org/docs/getting-started.html) - The web framword used
+* [ReactJS](https://reactjs.org/docs/getting-started.html) - The web framework used
 * [Sinatra](https://sinatrarb.com/documentation.html) - Used to build full CRUD API in Ruby
 * [Firebase](https://firebase.google.com/docs/auth) - Used to authenticate users
 * [Bootstrap](https://getbootstrap.com/docs/3.4/css/) - Used to style the front end
